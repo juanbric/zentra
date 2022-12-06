@@ -2,43 +2,44 @@ import { useState } from "react";
 import Spacer from "./Spacer";
 
 export const ContactForm = () => {
-  const [fullname, setFullname] = useState("");
-  const [email, setEmail] = useState("");
-  const [subject, setSubject] = useState("");
-  const [message, setMessage] = useState("");
-
   const handleKeyDown = (e: any) => {
     e.target.style.height = "inherit";
     e.target.style.height = `${e.target.scrollHeight}px`;
   };
 
+  const [name, setName] = useState('')
+const [email, setEmail] = useState('')
+const [message, setMessage] = useState('')
+const [submitted, setSubmitted] = useState(false)
+
+
+const handleSubmit = (e: any) => { 
+  e.preventDefault()
+  console.log('Sending')
+let data = {
+    name,
+    email,
+    message
+  }
+fetch('/api/contact', {
+    method: 'POST',
+    headers: {
+      'Accept': 'application/json, text/plain, */*',
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(data)
+  }).then((res) => {
+    console.log('Response received')
+    if (res.status === 200) {
+      console.log('Response succeeded!')
+      setSubmitted(true)
+      setName('')
+      setEmail('')
+      setMessage('')
+    }
+  })
+};
   
-  const handleSubmit = async (e:any) => {
-    e.preventDefault();
-
-    // let isValidForm = handleValidation();
-
-     
-      const res = await fetch("/api/sendgrid", {
-        body: JSON.stringify({
-          email: email,
-          fullname: fullname,
-          subject: subject,
-          message: message,
-        }),
-        headers: {
-          "Content-Type": "application/json",
-        },
-        method: "POST",
-      });
-
-      const { error } = await res.json();
-      if (error) {
-        console.log(error);
-        return;
-      }
-    console.log(fullname, email, subject, message);
-  };
   return (
     <form onSubmit={handleSubmit} className="card-next">
       <h3>Contáctanos</h3>
@@ -52,13 +53,12 @@ export const ContactForm = () => {
         provecho de la tecnología.
       </p>
       <Spacer size={24} />
-
       <InputField
-        name={"fullname"}
+        name={"name"}
         copy={"Tu nombre"}
         type={"text"}
-        state={fullname}
-        setState={setFullname}
+        state={name}
+        setState={setName}
       />
       <InputField
         name={"email"}
@@ -66,13 +66,6 @@ export const ContactForm = () => {
         type={"email"}
         state={email}
         setState={setEmail}
-      />
-      <InputField
-        name={"subject"}
-        copy={"Tu asunto"}
-        type={"text"}
-        state={subject}
-        setState={setSubject}
       />
 
       <label htmlFor="message">
@@ -90,12 +83,11 @@ export const ContactForm = () => {
         name="message"
       />
       <Spacer size={16} />
-      <button
+      <input
         type="submit"
+        onClick={(e)=>{handleSubmit(e)}}
         className="px-4 py-2 bg-[#000000] text-white rounded-[8px]"
-      >
-        Solicita información
-      </button>
+      />
     </form>
   );
 };
