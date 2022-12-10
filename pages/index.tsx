@@ -24,12 +24,12 @@ export default function Home() {
         <div className="grid-perfect">
           <p className="card-next">
             Creamos páginas informativas, corporativas, y tiendas
-            online rápidas. Modernizamos la que ya tienes par que así incrementes tu capacidad de venta.
+            online rápidas.<br/><br/>Modernizamos tu web para que incrementes tu capacidad de venta.
           </p>
           <p className="card-next">
             Si buscas vender más, convertir mejor, y posicionarte con más
             eficacia en el mundo online, desarrolla tu presencia web con Zentra
-            Dev para conseguir los resultados inigualables.
+            Dev.<br/><br/>Resultados y satisfacción garantizada.
           </p>
           <Spacer size={24} />
           <ContactForm />
