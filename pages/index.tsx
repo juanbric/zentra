@@ -23,7 +23,7 @@ export default function Home() {
 
         <div className="grid-perfect">
           <p className="card-next">
-            La agencia de desarrollo web que crea páginas corporativas y tiendas
+            Agencia de desarrollo web que crea páginas corporativas y tiendas
             online rápidas, bonitas, usables y que te hacen vender como ninguna.
           </p>
           <p className="card-next">
