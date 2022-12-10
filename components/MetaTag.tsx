@@ -14,6 +14,7 @@ export const MetaTag = ({
   return (
     <Head>
       <title>{title}</title>
+      <link href="https://fonts.googleapis.com/css?family=Exo&display=swap" rel="stylesheet" />
       <meta name="description" content={description} />
       <meta
         name="keywords"
