@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 import ContactForm from "../components/ContactForm";
 import MetaTag from "../components/MetaTag";
 import Spacer from "../components/Spacer";
@@ -32,6 +33,10 @@ export default function Home() {
             Dev.<br/><br/>Resultados y satisfacción garantizada.
           </p>
           <Spacer size={24} />
+          <div className="card-form">
+          <Link href={'/nosotros'} className="pr-6">Sobre nosotros</Link>
+          <Link href={'/servicios'}>Nuestros servicios</Link>
+          </div>
           <ContactForm />
         </div>
       </main>
