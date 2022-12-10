@@ -17,26 +17,27 @@ export default function Home() {
         image={undefined}
       />
       <main className="main">
-        <h1 className="title">Zentra Dev</h1>
+        <h1 className="header-bold" style={{fontFamily: 'Exo 2'}}>Zentra Dev</h1>
 
-        <p className="description text-center">Agencia de Desarrollo Web</p>
+        <p className="header-light text-center">Agencia de Desarrollo Web</p>
 
         <div className="grid-perfect">
           <p className="card-next">
-            Agencia de desarrollo web que crea páginas corporativas y tiendas
-            online rápidas, bonitas, usables y que te hacen vender como ninguna.
+            Creamos páginas informativas, corporativas, funcionales y tiendas
+            online rápidas y modernas que incrementan tu capacidad de venta.
           </p>
           <p className="card-next">
-            Si buscas vender más, convertir mejor, y posicionarte más rápido,
-            desarrolla tu presencia web con Zentra Dev para conseguir
-            resultados.
+            Si buscas vender más, convertir mejor, y posicionarte con más
+            eficacia en el mundo online, desarrolla tu presencia web con Zentra
+            Dev para conseguir los resultados inigualables.
           </p>
           <Spacer size={24} />
           <ContactForm />
         </div>
       </main>
 
-      <footer className="footer">Llámanos +31620717899</footer>
+      <footer className="footer copy"><img src="/whatsapp.svg" className="pr-4 "/>Escríbenos por whatsapp al +31620717899 
+         </footer>
     </>
   );
 }

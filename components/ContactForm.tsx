@@ -7,47 +7,44 @@ export const ContactForm = () => {
     e.target.style.height = `${e.target.scrollHeight}px`;
   };
 
-  const [name, setName] = useState('')
-const [email, setEmail] = useState('')
-const [message, setMessage] = useState('')
-const [submitted, setSubmitted] = useState(false)
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [submitted, setSubmitted] = useState(false);
 
+  const handleSubmit = (e: any) => {
+    e.preventDefault();
+    console.log("Sending");
+    let data = {
+      name,
+      email,
+      message,
+    };
+    fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        Accept: "application/json, text/plain, */*",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    }).then((res) => {
+      console.log("Response received");
+      if (res.status === 200) {
+        console.log("Response succeeded!");
+        setSubmitted(true);
+        setName("");
+        setEmail("");
+        setMessage("");
+      }
+    });
+  };
 
-const handleSubmit = (e: any) => { 
-  e.preventDefault()
-  console.log('Sending')
-let data = {
-    name,
-    email,
-    message
-  }
-fetch('/api/contact', {
-    method: 'POST',
-    headers: {
-      'Accept': 'application/json, text/plain, */*',
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(data)
-  }).then((res) => {
-    console.log('Response received')
-    if (res.status === 200) {
-      console.log('Response succeeded!')
-      setSubmitted(true)
-      setName('')
-      setEmail('')
-      setMessage('')
-    }
-  })
-};
-  
   return (
-    <form onSubmit={handleSubmit} className="card-next">
+    <form onSubmit={handleSubmit} className="card-form">
       <h3>Contáctanos</h3>
-      <Spacer size={8} />
-      <h1 className="text-2xl font-bold dark:text-gray-50">
-        ¡Podemos ayudarte!
-      </h1>
-      <Spacer size={8} />
+      <Spacer size={12} />
+      <h1 className="title-bold">¡Podemos ayudarte!</h1>
+      <Spacer size={16} />
       <p>
         Nos encantan los desafíos y trabajamos con gusto para ayudarte a sacar
         provecho de la tecnología.
@@ -68,25 +65,27 @@ fetch('/api/contact', {
         setState={setEmail}
       />
 
-      <label htmlFor="message">
+      <label className="copy" htmlFor="message">
         Tu mensaje<span className="text-red-500">*</span>
       </label>
       <Spacer size={8} />
       <textarea
-        className="w-full min-h-[120px] p-1"
+        className="w-full bg-[#f5f5f5] rounded-[8px] p-1"
         onKeyDown={handleKeyDown}
         value={message}
         onChange={(e) => {
           setMessage(e.target.value);
         }}
-        style={{resize: 'none'}}
+        style={{ resize: "none" }}
         name="message"
       />
       <Spacer size={16} />
       <input
         type="submit"
-        onClick={(e)=>{handleSubmit(e)}}
-        className="px-4 py-2 bg-[#000000] text-white rounded-[8px]"
+        onClick={(e) => {
+          handleSubmit(e);
+        }}
+        className="px-4 py-2 bg-[#1d1d1d] text-white rounded-[8px]"
       />
     </form>
   );
@@ -113,7 +112,7 @@ const InputField = ({
       </label>
       <Spacer size={8} />
       <input
-        className="h-7"
+        className="p-2 bg-[#f5f5f5] rounded-[8px]"
         value={state}
         onChange={(e) => {
           setState(e.target.value);
