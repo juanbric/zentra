@@ -1,5 +1,5 @@
-import { useState } from "react";
 import Spacer from "./Spacer";
+import emailjs from "emailjs-com";
 
 export const ContactForm = () => {
   const handleKeyDown = (e: any) => {
@@ -7,36 +7,21 @@ export const ContactForm = () => {
     e.target.style.height = `${e.target.scrollHeight}px`;
   };
 
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-  const [submitted, setSubmitted] = useState(false);
+  const SERVICE_ID = "service_y9n1a9t";
+  const TEMPLATE_ID = "template_fy238wa";
+  const USER_ID = "y7AuvMWzBJ45y1jcI";
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
-    console.log("Sending");
-    let data = {
-      name,
-      email,
-      message,
-    };
-    fetch("/api/contact", {
-      method: "POST",
-      headers: {
-        Accept: "application/json, text/plain, */*",
-        "Content-Type": "application/json",
+    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, USER_ID).then(
+      (result) => {
+        console.log(result.text);
       },
-      body: JSON.stringify(data),
-    }).then((res) => {
-      console.log("Response received");
-      if (res.status === 200) {
-        console.log("Response succeeded!");
-        setSubmitted(true);
-        setName("");
-        setEmail("");
-        setMessage("");
+      (error) => {
+        console.log(error.text);
       }
-    });
+    );
+    e.target.reset();
   };
 
   return (
@@ -50,43 +35,31 @@ export const ContactForm = () => {
         provecho de la tecnología.
       </p>
       <Spacer size={24} />
+
+      <InputField name={"user_name"} copy={"Tu nombre"} type={"text"} />
       <InputField
-        name={"name"}
-        copy={"Tu nombre"}
-        type={"text"}
-        state={name}
-        setState={setName}
-      />
-      <InputField
-        name={"email"}
+        name={"user_email"}
         copy={"Tu correo electrónico"}
         type={"email"}
-        state={email}
-        setState={setEmail}
       />
 
       <label className="copy" htmlFor="message">
-        Tu mensaje<span className="text-red-500">*</span>
+        Tu mensaje
       </label>
       <Spacer size={8} />
       <textarea
         className="w-full bg-[#f5f5f5] rounded-[8px] p-1"
         onKeyDown={handleKeyDown}
-        value={message}
-        onChange={(e) => {
-          setMessage(e.target.value);
-        }}
         style={{ resize: "none" }}
-        name="message"
+        name="user_message"
       />
       <Spacer size={16} />
-      <input
+      <button
         type="submit"
-        onClick={(e) => {
-          handleSubmit(e);
-        }}
         className="px-4 py-2 bg-[#1d1d1d] text-white rounded-[8px]"
-      />
+      >
+        Solicita información
+      </button>
     </form>
   );
 };
@@ -95,30 +68,20 @@ const InputField = ({
   name,
   copy,
   type,
-  state,
-  setState,
 }: {
   name: string;
   copy: string;
   type: string;
-  state: any;
-  setState: any;
 }) => {
   return (
     <>
-      <label htmlFor={name}>
-        {copy}
-        <span className="text-red-500 dark:text-gray-50">*</span>
-      </label>
+      <label htmlFor={name}>{copy}</label>
       <Spacer size={8} />
       <input
         className="p-2 bg-[#f5f5f5] rounded-[8px]"
-        value={state}
-        onChange={(e) => {
-          setState(e.target.value);
-        }}
         type={type}
         name={name}
+        required
       />
       <Spacer size={16} />
     </>

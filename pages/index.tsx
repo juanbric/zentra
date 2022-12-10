@@ -23,8 +23,8 @@ export default function Home() {
 
         <div className="grid-perfect">
           <p className="card-next">
-            Creamos páginas informativas, corporativas, funcionales y tiendas
-            online rápidas y modernas que incrementan tu capacidad de venta.
+            Creamos páginas informativas, corporativas, y tiendas
+            online rápidas. Modernizamos la que ya tienes par que así incrementes tu capacidad de venta.
           </p>
           <p className="card-next">
             Si buscas vender más, convertir mejor, y posicionarte con más
