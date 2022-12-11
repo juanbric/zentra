@@ -11,17 +11,17 @@ export const ContactForm = () => {
   const TEMPLATE_ID = "template_fy238wa";
   const USER_ID = "y7AuvMWzBJ45y1jcI";
 
-  const handleSubmit = (e: any) => {
+  const handleSubmit = (e:any) => {
     e.preventDefault();
-    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, USER_ID).then(
-      (result) => {
+    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, USER_ID)
+      .then((result) => {
         console.log(result.text);
-      },
-      (error) => {
+        // Success message
+      }, (error) => {
         console.log(error.text);
-      }
-    );
-    e.target.reset();
+         // Error message
+      });
+    e.target.reset()
   };
 
   return (
@@ -36,7 +36,11 @@ export const ContactForm = () => {
       </p>
       <Spacer size={24} />
 
-      <InputField name={"user_name"} copy={"Tu nombre"} type={"text"} />
+      <InputField
+        name={"user_name"}
+        copy={"Tu nombre"}
+        type={"text"}
+      />
       <InputField
         name={"user_email"}
         copy={"Tu correo electrónico"}
