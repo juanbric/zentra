@@ -2,6 +2,7 @@ import ContactForm from "../components/ContactForm";
 import MetaTag from "../components/MetaTag";
 import Spacer from "../components/Spacer";
 import { VStack, Stack } from "@chakra-ui/react";
+import Banner from "../components/Banner";
 
 export default function Home() {
   return (
@@ -16,10 +17,7 @@ export default function Home() {
         url={undefined}
         image={undefined}
       />
-      <h1 className="header-bold text-center">Zentra Dev</h1>
-      <Spacer size={8} />
-      <p className="header-light text-center">Agencia de Desarrollo Web</p>
-      <Spacer size={24} />
+      <Banner />
       <Stack
         direction={["column", "row"]}
         spacing={6}
