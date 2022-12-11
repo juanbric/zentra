@@ -3,6 +3,7 @@ import MetaTag from "../components/MetaTag";
 import { VStack } from "@chakra-ui/react";
 import Spacer from "../components/Spacer";
 import Image from "next/image";
+import Banner from "../components/Banner";
 
 export const Nosotros = () => {
   return (
@@ -15,10 +16,7 @@ export const Nosotros = () => {
         url={undefined}
         image={"/logo.png"}
       />
-      <h1 className="header-bold text-center">Zentra Dev</h1>
-      <Spacer size={8} />
-      <p className="header-light text-center">Agencia de Desarrollo Web</p>
-      <Spacer size={24} />
+      <Banner />
       <p className="card-form copy">
         Somos una agencia de desarrollo web comprometidos a proporcionar a
         nuestros clientes productos y servicios de alta calidad a un precio
@@ -62,7 +60,7 @@ export const Nosotros = () => {
       </p>
       <Spacer size={24} />
       <BotonLink
-        link={"/nosotros"}
+        link={"/servicios"}
         mensaje={"Lee más sobre nuestros servicios"}
       />
     </VStack>
