@@ -1,12 +1,11 @@
-import Head from "next/head";
-import Link from "next/link";
 import ContactForm from "../components/ContactForm";
 import MetaTag from "../components/MetaTag";
 import Spacer from "../components/Spacer";
+import { VStack, Stack } from "@chakra-ui/react";
 
 export default function Home() {
   return (
-    <>
+    <VStack>
       <MetaTag
         title={
           "Zentra Dev | Agencia de Desarrollo Web | Aumenta tus conversiones"
@@ -17,32 +16,31 @@ export default function Home() {
         url={undefined}
         image={undefined}
       />
-      <main className="main">
-        <h1 className="header-bold" style={{fontFamily: 'Exo 2'}}>Zentra Dev</h1>
-
-        <p className="header-light text-center">Agencia de Desarrollo Web</p>
-
-        <div className="grid-perfect">
-          <p className="card-next">
-            Creamos páginas informativas, corporativas, y tiendas
-            online rápidas.<br/><br/>Modernizamos tu web para que incrementes tu capacidad de venta.
-          </p>
-          <p className="card-next">
-            Si buscas vender más, convertir mejor, y posicionarte con más
-            eficacia en el mundo online, desarrolla tu presencia web con Zentra
-            Dev.<br/><br/>Resultados y satisfacción garantizada.
-          </p>
-          <Spacer size={24} />
-          <div className="card-form">
-          <Link href={'/nosotros'} className="pr-6">Sobre nosotros</Link>
-          <Link href={'/servicios'}>Nuestros servicios</Link>
-          </div>
-          <ContactForm />
-        </div>
-      </main>
-
-      <footer className="footer copy"><img src="/whatsapp.svg" className="pr-4 "/>Escríbenos por whatsapp al +31620717899 
-         </footer>
-    </>
+      <h1 className="header-bold text-center">Zentra Dev</h1>
+      <Spacer size={8} />
+      <p className="header-light text-center">Agencia de Desarrollo Web</p>
+      <Spacer size={24} />
+      <Stack
+        direction={["column", "row"]}
+        spacing={6}
+        className="text-center items-center justify-center copy"
+      >
+        <p className="rounded-[16px] bg-[#f5f5f5] p-4">
+          Creamos páginas informativas, corporativas, y tiendas online rápidas.
+        </p>
+        <p className="rounded-[16px] bg-[#f5f5f5] p-4">
+          Modernizamos tu página web para que incrementes tu capacidad de venta.
+        </p>
+        <p className="rounded-[16px] bg-[#f5f5f5] p-4">
+          Si buscas vender más, convertir mejor, y posicionarte con más eficacia
+          en el mundo online, desarrolla tu presencia web con Zentra Dev.
+        </p>
+        <p className="rounded-[16px] bg-[#f5f5f5] p-4">
+          Resultados y satisfacción garantizada.
+        </p>
+      </Stack>
+      <Spacer size={24} />
+      <ContactForm />
+    </VStack>
   );
 }
