@@ -31,8 +31,7 @@ export const ContactForm = () => {
       <h1 className="title-bold">¡Podemos ayudarte!</h1>
       <Spacer size={16} />
       <p>
-        Nos encantan los desafíos y trabajamos con gusto para ayudarte a sacar
-        provecho de la tecnología.
+      Si estás interesado en nuestros servicios, no dudes en ponerse en contacto con nosotros para programar una reunión de consultoría gratuita. Estamos seguros de que podemos ayudarte a maximizar el potencial de tu negocio en línea.
       </p>
       <Spacer size={24} />
 
