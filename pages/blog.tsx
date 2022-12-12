@@ -1,6 +1,27 @@
 import MetaTag from "../components/MetaTag";
+import { createClient } from "contentful";
+import Spacer from "../components/Spacer";
+import BlogCard from "../components/BlogCard";
 
-export const Blog = () => {
+export async function getStaticProps() {
+  const client = createClient({
+    //@ts-ignore
+    space: process.env.CONTENTFUL_SPACE_ID,
+    //@ts-ignore
+    accessToken: process.env.CONTENTFUL_ACCESS_KEY,
+  });
+
+  const res = await client.getEntries({ content_type: "blog" });
+
+  return {
+    props: {
+      blogs: res.items,
+    },
+  };
+}
+
+export const Blog = ({ blogs }: { blogs: any }) => {
+  console.log("blogs", blogs);
   return (
     <>
       <MetaTag
@@ -11,8 +32,21 @@ export const Blog = () => {
         url={undefined}
         image={"/logo.png"}
       />
+      {blogs?.map((articulo: any) => {
+        const titulo = articulo?.fields.titulo;
+        const subTitulo = articulo?.fields.subTitulo;
+        const coverUrl = articulo?.fields.cover.fields.file.url;
+        return (
+          <BlogCard
+            key={articulo?.sys.id}
+            title={titulo}
+            subTitle={subTitulo}
+            coverUrl={coverUrl}
+          />
+        );
+      })}
 
-          <h1 className="header-bold">
+      {/* <h1 className="header-bold">
             5 razones por las que su empresa necesita un sitio web profesional
           </h1>
           <p className="header-light">
@@ -58,8 +92,7 @@ export const Blog = () => {
             línea. Si aún no tiene un sitio web o si su sitio web actual no
             cumple con sus necesidades, no dude en contactar a Zentra Dev para
             cumplir sus deseos.
-          </p>
-
+          </p> */}
     </>
   );
 };

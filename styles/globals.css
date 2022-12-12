@@ -98,5 +98,10 @@
   .copy {
     font-family: Exo;
   }
+
+  .copy-bold {
+    font-family: Exo;
+    font-size: 1.5rem;
+  }
 }
 
