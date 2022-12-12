@@ -15,7 +15,7 @@ export default function Home() {
           "Si buscas vender más, convertir mejor, y posicionarte más rápido, desarrolla tu presencia web con Zentra para conseguir los resultados que siempre soñaste."
         }
         url={undefined}
-        image={undefined}
+        image={"https://i.ibb.co/N7zSwSS/logo.png"}
       />
       <Banner />
       <Stack

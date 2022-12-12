@@ -1,6 +1,6 @@
 import { VStack } from "@chakra-ui/react";
-import Link from "next/link";
 import Spacer from "./Spacer";
+import Image from "next/image";
 
 export const BlogCard = ({
   title,
@@ -12,15 +12,13 @@ export const BlogCard = ({
   coverUrl: string;
 }) => {
   return (
-    <Link href="">
-      <VStack className="bg-[#f5f5f5] rounded-[22px] p-4 max-w-[240px]">
-        <img src={coverUrl} alt={"Blog Cover"} className="rounded-[22px]" />
-        <Spacer size={8} />
-        <p className="copy-bold">{title}</p>
-        <Spacer size={8} />
-        <p className="copy">{subTitle}</p>
-      </VStack>
-    </Link>
+    <VStack className="bg-[#f5f5f5] rounded-[22px] p-4 max-w-[300px]">
+      <Image src={"https:" + coverUrl} alt={"Blog Cover"} width="280" height="280" className="rounded-[22px]" />
+      <Spacer size={8} />
+      <p className="copy-bold">{title}</p>
+      <Spacer size={8} />
+      <p className="copy">{subTitle}</p>
+    </VStack>
   );
 };
 

@@ -817,6 +817,18 @@
   resolved "https://registry.yarnpkg.com/@chakra-ui/visually-hidden/-/visually-hidden-2.0.13.tgz#6553467d93f206d17716bcbe6e895a84eef87472"
   integrity sha512-sDEeeEjLfID333EC46NdCbhK2HyMXlpl5HzcJjuwWIpyVz4E1gKQ9hlwpq6grijvmzeSywQ5D3tTwUrvZck4KQ==
 
+"@contentful/rich-text-react-renderer@^15.16.2":
+  version "15.16.2"
+  resolved "https://registry.yarnpkg.com/@contentful/rich-text-react-renderer/-/rich-text-react-renderer-15.16.2.tgz#c3c3bf3d0bbfe21f20c6da76f6f3e9f016fb1553"
+  integrity sha512-5UJxF+6DhcwkEsgJsHczJrCxveaQ95Oqj3NaJYmM9VDVKlvPK8cNXmSiWArHCEN0uw3yU/IS2sw16uIam3LsjQ==
+  dependencies:
+    "@contentful/rich-text-types" "^16.0.2"
+
+"@contentful/rich-text-types@^16.0.2":
+  version "16.0.2"
+  resolved "https://registry.yarnpkg.com/@contentful/rich-text-types/-/rich-text-types-16.0.2.tgz#779bc76b5159152b3a9e908e6a04cb9342faa9b1"
+  integrity sha512-ovbmCKQjlyGek4NuABoqDesC3FBV3e5jPMMdtT2mpOy9ia31MKO0NSFMRGZu7Q+veZzmDMja8S1i/XeFCUT9Pw==
+
 "@emotion/babel-plugin@^11.10.5":
   version "11.10.5"
   resolved "https://registry.yarnpkg.com/@emotion/babel-plugin/-/babel-plugin-11.10.5.tgz#65fa6e1790ddc9e23cc22658a4c5dea423c55c3c"
