@@ -44,12 +44,12 @@ export const Servicios = () => {
   return (
     <VStack>
       <MetaTag
-        title={"Sobre nosotros | Zentra Dev"}
+        title={"Nuestros servicios | Zentra Dev"}
         description={
-          "ofrecemos una amplia gama de servicios a nuestros clientes. Desde diseño y desarrollo de sitios web personalizados hasta soluciones de comercio electrónico, estamos equipados para manejar todas sus necesidades de tecnología de la información."
+          "Ofrecemos una amplia gama de servicios a nuestros clientes. Desde diseño y desarrollo de sitios web personalizados hasta soluciones de comercio electrónico, estamos equipados para manejar todas sus necesidades de tecnología de la información."
         }
         url={undefined}
-        image={"/logo.png"}
+        image={"https://i.ibb.co/N7zSwSS/logo.png"}
       />
       <Banner />
       {services.map((service, i) => {
