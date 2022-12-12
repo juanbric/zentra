@@ -1,7 +1,9 @@
 import MetaTag from "../../components/MetaTag";
 import { createClient } from "contentful";
-import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
-
+import parse from "html-react-parser";
+//@ts-ignore
+import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
+import Skeleton from "../../components/Skeleton";
 
 const client = createClient({
   //@ts-ignore
@@ -23,7 +25,7 @@ export const getStaticPaths = async () => {
 
   return {
     paths,
-    fallback: false,
+    fallback: true,
   };
 };
 
@@ -33,15 +35,27 @@ export async function getStaticProps({ params }: { params: any }) {
     "fields.slug": params.slug,
   });
 
+  if (!items.length) {
+    return {
+      redirect: {
+        destination: "/",
+        permanent: false,
+      },
+    };
+  }
+
   return {
     props: { blog: items[0] },
+    revalidate: 10,
   };
 }
 
 export const Slug = ({ blog }: { blog: any }) => {
+  if (!blog) return <Skeleton />;
+
   const { titulo, subTitulo, articulo } = blog.fields;
   const coverUrl = blog.fields.cover.fields.file.url;
-  console.log("blog", blog)
+  console.log("blog", blog);
   return (
     <article>
       <MetaTag
@@ -57,9 +71,11 @@ export const Slug = ({ blog }: { blog: any }) => {
       />
       <h1 className="header-bold mt-8">{titulo}</h1>
       <p className="header-light my-6">{subTitulo}</p>
-      <div className="copy">
-     {documentToReactComponents(articulo)}
-     </div>
+      <div className="copy h1 h2 h3 a">
+        {parse(
+          documentToHtmlString(articulo).replace(/<\/p>/g, "</p><br/>")
+        )}
+      </div>
     </article>
   );
 };

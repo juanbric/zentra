@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@chakra-ui/react": "^2.4.3",
-    "@contentful/rich-text-react-renderer": "^15.16.2",
+    "@contentful/rich-text-html-renderer": "^16.0.2",
     "@emotion/react": "11",
     "@emotion/styled": "11",
     "@sendgrid/mail": "^7.7.0",
@@ -22,6 +22,7 @@
     "eslint": "8.29.0",
     "eslint-config-next": "13.0.6",
     "framer-motion": "6",
+    "html-react-parser": "^3.0.4",
     "next": "13.0.6",
     "node": "^19.2.0",
     "react": "18.2.0",

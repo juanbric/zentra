@@ -16,6 +16,7 @@ export async function getStaticProps() {
   return {
     props: {
       blogs: res.items,
+      revalidate: 10,
     },
   };
 }
@@ -31,6 +32,7 @@ export const Blog = ({ blogs }: { blogs: any }) => {
         url={undefined}
         image={"https://i.ibb.co/N7zSwSS/logo.png"}
       />
+      <h1 className="header-bold">Blog de Zentra Dev</h1>
       {blogs?.map((articulo: any) => {
         const { titulo, subTitulo, slug } = articulo?.fields;
         const coverUrl = articulo?.fields.cover.fields.file.url;
