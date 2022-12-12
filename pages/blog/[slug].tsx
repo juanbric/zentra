@@ -59,7 +59,7 @@ export const Slug = ({ blog }: { blog: any }) => {
   return (
     <article>
       <MetaTag
-        title={titulo + "| Zentra Dev"}
+        title={titulo + " | Zentra Dev"}
         description={subTitulo}
         url={undefined}
         image={"https:" + coverUrl}
