@@ -1,6 +1,7 @@
 import MetaTag from "../../components/MetaTag";
 import { createClient } from "contentful";
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+import Skeleton from "../../components/Skeleton";
 
 
 const client = createClient({
@@ -23,7 +24,7 @@ export const getStaticPaths = async () => {
 
   return {
     paths,
-    fallback: false,
+    fallback: true,
   };
 };
 
@@ -33,12 +34,25 @@ export async function getStaticProps({ params }: { params: any }) {
     "fields.slug": params.slug,
   });
 
+  if (!items.length) {
+    return {
+      redirect:{
+        destination: '/',
+        permanent: false
+      }
+    }
+  }
+
   return {
     props: { blog: items[0] },
+    revalidate: 10,
   };
 }
 
 export const Slug = ({ blog }: { blog: any }) => {
+
+  if (!blog) return <Skeleton />
+
   const { titulo, subTitulo, articulo } = blog.fields;
   const coverUrl = blog.fields.cover.fields.file.url;
   console.log("blog", blog)
