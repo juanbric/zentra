@@ -35,9 +35,8 @@ export const Blog = ({ blogs }: { blogs: any }) => {
         const { titulo, subTitulo, slug } = articulo?.fields;
         const coverUrl = articulo?.fields.cover.fields.file.url;
         return (
-          <Link href={"/blog/" + slug}>
+          <Link key={articulo?.sys.id} href={"/blog/" + slug}>
             <BlogCard
-              key={articulo?.sys.id}
               title={titulo}
               subTitle={subTitulo}
               coverUrl={coverUrl}
