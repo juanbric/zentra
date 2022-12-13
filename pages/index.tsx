@@ -17,24 +17,8 @@ export default function Home() {
         url={undefined}
         image={"https://i.ibb.co/N7zSwSS/logo.png"}
       />
-      <Banner />
-      <Stack
-        direction={["column", "row"]}
-        spacing={6}
-        className="text-center items-center justify-center copy"
-      >
-        <p className="rounded-[16px] bg-[#f5f5f5] max-w-[300px] p-4">
-          Creamos páginas informativas, corporativas, y tiendas online rápidas.
-        </p>
-        <p className="rounded-[16px] bg-[#f5f5f5] max-w-[300px] p-4">
-          Modernizamos tu página web para que incrementes tu capacidad de venta.
-        </p>
-        <p className="rounded-[16px] bg-[#f5f5f5] max-w-[300px] p-4">
-          Si buscas vender más, convertir mejor, y posicionarte con más eficacia
-          en el mundo online, desarrolla tu presencia web con Zentra Dev.
-        </p>
-      </Stack>
-      <Spacer size={24} />
+      <Banner img={"/logo-banner.jpg"} copy={"Transforma tu idea en una realidad digital con nuestra agencia de desarrollo web"} />
+       <Spacer size={24} />
       <ContactForm />
     </VStack>
   );

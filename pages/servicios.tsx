@@ -1,6 +1,7 @@
 import Banner from "../components/Banner";
 import MetaTag from "../components/MetaTag";
 import { VStack } from "@chakra-ui/react";
+import ContactForm from "../components/ContactForm";
 
 const services = [
   {
@@ -51,18 +52,24 @@ export const Servicios = () => {
         url={undefined}
         image={"https://i.ibb.co/N7zSwSS/logo.png"}
       />
-      <Banner />
-      {services.map((service, i) => {
-        return (
-          <>
+      <Banner
+        img={"/servicios.png"}
+        copy={
+          "Creamos páginas informativas, corporativas, y tiendas online rápidas - Modernizamos tu página web para que incrementes tu capacidad de venta"
+        }
+      />
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        {services.map((service, i) => {
+          return (
             <ValueCard
               key={i}
               title={service.title}
               description={service.descritpion}
             />
-          </>
-        );
-      })}
+          );
+        })}
+      </div>
+      <ContactForm />
     </VStack>
   );
 };
@@ -75,12 +82,10 @@ const ValueCard = ({
   description: string;
 }) => {
   return (
-    <>
-      <div className="bg-[#f6f6f6] max-w-[500px] rounded-[22px] p-4 mb-12">
-        <p className="header-light mb-2">{title}</p>
-        <p className="copy">{description}</p>
-      </div>
-    </>
+    <div className="border-2 border-[#f5f5f5] max-w-[500px] rounded-[22px] p-4 mb-12">
+      <p className="header-light mb-2">{title}</p>
+      <p className="copy">{description}</p>
+    </div>
   );
 };
 
