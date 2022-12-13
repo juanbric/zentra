@@ -1,13 +1,11 @@
 import Spacer from "./Spacer";
 
-export const Banner = () => {
+export const Banner = ({img, copy}:{img: string; copy: string}) => {
   return (
     <>
-      {/* <img src="/logo.png" /> */}
-      <h1 className="header-bold text-center">Zentra Dev</h1>
-      <Spacer size={8} />
-      <p className="header-light text-center">Agencia de Desarrollo Web</p>
-      <Spacer size={24} />
+      <img src={img} />
+      <p className="header-light text-center">{copy}</p>
+      <Spacer size={80} />
     </>
   );
 };

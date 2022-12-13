@@ -11,7 +11,7 @@ export const BotonLink = ({
   return (
     <Link
       href={link}
-      className="px-4 py-2 bg-[#1d1d1d] text-white rounded-[8px]"
+      className="px-4 py-2 bg-[#1d1d1d] text-white copy rounded-[8px]"
     >
       {mensaje}
     </Link>

@@ -20,7 +20,7 @@ export const ContactForm = () => {
     emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, USER_ID).then(
       (result) => {
         console.log(result.text);
-        setSuccessModal(true)
+        setSuccessModal(true);
       },
       (error) => {
         console.log(error.text);
@@ -38,10 +38,10 @@ export const ContactForm = () => {
         <h1 className="title-bold">¡Podemos ayudarte!</h1>
         <Spacer size={16} />
         <p>
-          Si estás interesado en nuestros servicios, no dudes en ponerse en
-          contacto con nosotros para programar una reunión de consultoría
-          gratuita. Estamos seguros de que podemos ayudarte a maximizar el
-          potencial de tu negocio en línea.
+          Si estás interesado en modernizar tu página web para incrementar tu
+          capacidad de venta, no dudes en ponerte en contacto con nosotros para
+          programar una reunión de consultoría gratuita. Estamos seguros de que
+          podemos ayudarte a maximizar el potencial de tu negocio en línea.
         </p>
         <Spacer size={24} />
 
@@ -70,7 +70,12 @@ export const ContactForm = () => {
           Solicita información
         </button>
       </form>
-      <SimpleModal isOpen={successModal} onClose={() => setSuccessModal(false)} headerText={"¡Gracias!"} description={"Nos pondremos en contacto contigo en en breve."} />
+      <SimpleModal
+        isOpen={successModal}
+        onClose={() => setSuccessModal(false)}
+        headerText={"¡Gracias!"}
+        description={"Nos pondremos en contacto contigo en en breve."}
+      />
     </>
   );
 };
