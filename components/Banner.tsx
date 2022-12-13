@@ -3,11 +3,9 @@ import Spacer from "./Spacer";
 export const Banner = () => {
   return (
     <>
-      {/* <img src="/logo.png" /> */}
-      <h1 className="header-bold text-center">Zentra Dev</h1>
-      <Spacer size={8} />
-      <p className="header-light text-center">Agencia de Desarrollo Web</p>
-      <Spacer size={24} />
+      <img src="/logo-banner.jpg" />
+      <p className="header-light text-center">Transforma tu idea en una realidad digital con nuestra agencia de desarrollo web</p>
+      <Spacer size={52} />
     </>
   );
 };
