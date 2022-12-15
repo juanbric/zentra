@@ -1187,6 +1187,19 @@
   dependencies:
     tslib "^2.4.0"
 
+"@typeform/embed-react@^2.7.0":
+  version "2.7.0"
+  resolved "https://registry.yarnpkg.com/@typeform/embed-react/-/embed-react-2.7.0.tgz#969b1487062d3cd005d89b744b009f98a32fd1b3"
+  integrity sha512-6+iRJHd2OoNFAxDBiKq+7wFYB5ggFimWISJYKcarqDTtWlFaFygAPUbGSgKnc2SY8r1JtCPY6ayw1InOArrY7A==
+  dependencies:
+    "@typeform/embed" "2.4.1"
+    fast-deep-equal "^3.1.3"
+
+"@typeform/embed@2.4.1":
+  version "2.4.1"
+  resolved "https://registry.yarnpkg.com/@typeform/embed/-/embed-2.4.1.tgz#d530388bf4c634bdc22c2c553104af7e17e6afb9"
+  integrity sha512-MjlHZctDc71uceuPvuy6c6vY/iNW2Js7rCiFJRaC7DO8sHfVHRnFv7bGpf9p10AAD5aqrOFDLwJH9siCk/i6IA==
+
 "@types/json5@^0.0.29":
   version "0.0.29"
   resolved "https://registry.yarnpkg.com/@types/json5/-/json5-0.0.29.tgz#ee28707ae94e11d2b827bcbe5270bcea7f3e71ee"

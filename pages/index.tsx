@@ -4,6 +4,7 @@ import Spacer from "../components/Spacer";
 import { VStack, Stack } from "@chakra-ui/react";
 import Banner from "../components/Banner";
 
+
 export default function Home() {
   return (
     <VStack>
@@ -18,7 +19,7 @@ export default function Home() {
         image={"https://i.ibb.co/N7zSwSS/logo.png"}
       />
       <Banner img={"/logo-banner.jpg"} copy={"Transforma tu idea en una realidad digital con nuestra agencia de desarrollo web"} />
-       <Spacer size={24} />
+      <Spacer size={24} />
       <ContactForm />
     </VStack>
   );
