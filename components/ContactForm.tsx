@@ -2,6 +2,7 @@ import Spacer from "./Spacer";
 import emailjs from "emailjs-com";
 import { useState } from "react";
 import { SimpleModal } from "./SimpleModal";
+import { PopupButton } from "@typeform/embed-react";
 
 export const ContactForm = () => {
   const [successModal, setSuccessModal] = useState<boolean>(false);
@@ -32,15 +33,16 @@ export const ContactForm = () => {
 
   return (
     <>
+    <PopupButton className="py-3 px-4 copy-bold bg-black text-white rounded-[16px]" id="rUQcTGYz">¡Preséntanos tu proyecto!</PopupButton>
+    <Spacer size={42} />
       <form onSubmit={handleSubmit} className="card-form">
-        <h3>Contáctanos</h3>
-        <Spacer size={12} />
+        <h3>Puedes contactarnos con cualquier pregunta que tengas</h3>
+        <Spacer size={16} />
         <h1 className="title-bold">¡Podemos ayudarte!</h1>
         <Spacer size={16} />
         <p>
           Si estás interesado en modernizar tu página web para incrementar tu
-          capacidad de venta, no dudes en ponerte en contacto con nosotros para
-          programar una reunión de consultoría gratuita. Estamos seguros de que
+          capacidad de venta, ponte en contacto coon nosotros. Estamos seguros de que
           podemos ayudarte a maximizar el potencial de tu negocio en línea.
         </p>
         <Spacer size={24} />

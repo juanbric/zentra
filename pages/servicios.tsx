@@ -1,6 +1,6 @@
 import Banner from "../components/Banner";
 import MetaTag from "../components/MetaTag";
-import { VStack } from "@chakra-ui/react";
+import { Stack, VStack } from "@chakra-ui/react";
 import ContactForm from "../components/ContactForm";
 
 const services = [
@@ -58,6 +58,21 @@ export const Servicios = () => {
           "Creamos páginas informativas, corporativas, y tiendas online rápidas - Modernizamos tu página web para que incrementes tu capacidad de venta"
         }
       />
+
+      <h1 className="copy-bold text-center">
+        Algunas de las tecnologías con las que trabajamos
+      </h1>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 pt-8 pb-12">
+        <img src="/typescript.png" className="max-w-[150px]" />
+        <img src="/tailwind.png" className="max-w-[150px] lg:pt-8" />
+        <img src="/next.png" className="max-w-[150px]" />
+        <img src="/react.png" className="max-w-[150px]" />
+        <img src="/github.png" className="max-w-[150px]" />
+        <img src="/contentful.png" className="max-w-[150px]" />
+        <img src="/chakra.png" className="max-w-[150px] lg:pt-2" />
+        <img src="/node.png" className="max-w-[150px]" />
+      </div>
+
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {services.map((service, i) => {
           return (
@@ -69,6 +84,17 @@ export const Servicios = () => {
           );
         })}
       </div>
+
+      <h1 className="copy-bold text-center">
+       Mira el último proyecto que diseñamos y creamos desde cero
+      </h1>
+      <a
+        href="https://www.soltype.io"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img src="soltype-logo-black.svg" className="pt-8 pb-14" />
+      </a>
       <ContactForm />
     </VStack>
   );

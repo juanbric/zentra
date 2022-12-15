@@ -67,10 +67,7 @@ export const Nosotros = () => {
           óptima.
         </p>
       </div>
-      <BotonLink
-        link={"/servicios"}
-        mensaje={"Lee más sobre nuestros servicios"}
-      />
+      <Spacer size={32} />
       <ContactForm />
     </VStack>
   );
