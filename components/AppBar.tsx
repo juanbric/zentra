@@ -18,6 +18,7 @@ export const AppBar = () => {
         <Link href={"/nosotros"}>Sobre nosotros</Link>
         <Link href={"/servicios"}>Nuestros servicios</Link>
         <Link href={"/blog"}>Blog</Link>
+        <Link href={"/contacto"}>Contacto</Link>
       </div>
     </>
   );
