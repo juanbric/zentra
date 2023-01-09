@@ -9,7 +9,7 @@ const PresentanosTuProyecto = () => {
       
       <VStack>
       <MetaTag
-        title={"Blog | Zentra Dev"}
+        title={"Preséntanos tu proyecto | Zentra Dev"}
         description={
           "Ofrecemos una amplia gama de servicios a nuestros clientes. Desde diseño y desarrollo de sitios web personalizados hasta soluciones de comercio electrónico, estamos equipados para manejar todas sus necesidades de tecnología de la información."
         }
