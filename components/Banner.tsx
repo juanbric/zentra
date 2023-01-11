@@ -21,7 +21,7 @@ export const Banner = ({ copy }: { copy: string }) => {
           <div className="verde">zentradev</div>
         </HStack>
         <Spacer size={8} />
-        <p className="sub-header-tiny">Mente sana, vida plena</p>
+        <p className="sub-header-tiny">Elevando presencia online</p>
         <Spacer size={24} />
         <h1 className="copy blue">{copy}</h1>
         <Spacer size={48} />
@@ -39,7 +39,7 @@ export const Banner = ({ copy }: { copy: string }) => {
               width={270}
               height={270}
               src={`/cover-1.svg`}
-              className="max-w-[270px] rounded-cool flex"
+              className="max-w-[270px] rounded-cool flex mb-6"
               alt={""}
             />
             <Image
@@ -50,19 +50,19 @@ export const Banner = ({ copy }: { copy: string }) => {
               alt={""}
             />
           </div>
-          <div className="pt-[80px]">
+          <div className="pt-[90px]">
             <Image
               width={270}
               height={270}
-              src={`/cover-2.svg`}
-              className="max-w-[270px] rounded-cool flex"
+              src={`/cover-4.svg`}
+              className="max-w-[270px] rounded-cool flex shadow-xl mb-6"
               alt={""}
             />
             <Image
               width={270}
               height={270}
-              src={`/cover-4.svg`}
-              className="max-w-[270px] rounded-cool flex"
+              src={`/cover-2.svg`}
+              className="max-w-[270px] rounded-cool flex "
               alt={""}
             />
           </div>

@@ -25,9 +25,9 @@ export const AppBar = () => {
             </div>
             <div className="hidden lg:block header-tiny-bold verde">
               <Link href={"/nosotros"}>Sobre nosotros</Link>
-              <Link href={"/servicios"}>Nuestros servicios</Link>
+              <Link className="px-8" href={"/servicios"}>Nuestros servicios</Link>
               <Link href={"/blog"}>Blog</Link>
-              <Link href={"/presentanos-tu-proyecto"}>
+              <Link className="px-8" href={"/presentanos-tu-proyecto"}>
                 Peséntanos tu proyecto
               </Link>
               <Link href={"/contacto"}>Contacto</Link>

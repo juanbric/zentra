@@ -7,7 +7,7 @@ export default function Home() {
     <>
       <Schema
         title={
-          "Zentra Dev | Agencia de Desarrollo Web | Aumenta tus conversiones"
+          "zentradev | Agencia de Desarrollo Web | Aumenta tus conversiones"
         }
         date={undefined}
         image={undefined}
@@ -18,7 +18,7 @@ export default function Home() {
       />
       <MetaTag
         title={
-          "Zentra Dev | Agencia de Desarrollo Web | Aumenta tus conversiones"
+          "zentradev | Agencia de Desarrollo Web | Aumenta tus conversiones"
         }
         description={
           "Si buscas vender más, convertir mejor, y posicionarte más rápido, desarrolla tu presencia web con Zentra para conseguir los resultados que siempre soñaste."

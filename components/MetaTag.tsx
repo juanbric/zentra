@@ -26,7 +26,7 @@ export const MetaTag = ({
       <meta name="revisit-after" content="21 days" />
       <meta name="creator" content="Juan Pablo Briceno" />
       <meta name="publisher" content="Zentra Dev" />
-      <link rel="icon" href="/logo.png" />
+      <link rel="icon" href="https://i.postimg.cc/rpCZS13d/logo.png" />
       <meta http-equiv="content-language" content="es" />
       <meta name="twitter:site" content="" />
       <meta name="twitter:title" content={title} />
