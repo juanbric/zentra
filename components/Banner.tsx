@@ -12,7 +12,7 @@ export const Banner = ({ copy }: { copy: string }) => {
             width={270}
             height={270}
             src={`/cover-1.svg`}
-            className="rounded-cool flex"
+            className="rounded-cool flex mb-4"
             alt={""}
           />
         </div>
@@ -24,15 +24,17 @@ export const Banner = ({ copy }: { copy: string }) => {
         <p className="sub-header-tiny">Elevando presencia online</p>
         <Spacer size={24} />
         <h1 className="copy blue">{copy}</h1>
-        <Spacer size={48} />
+        <Spacer size={32} />
+        <div className="hover:scale-105 transform-gpu ease-in-out duration-300">
         <Link
           href={"/blog"}
           className="bg-gris px-8 py-3 rounded-[18px] text-white header-tiny-bold"
         >
-          DESCUBRE
+          RESERVA TU CONSULTORÍA GRATUITA
         </Link>
+        </div>
       </div>
-      <div className="hidden lg:block lg:pl-12 lg:w-3/5">
+      <div className="hidden lg:block lg:pl-14 pt-4 lg:w-3/5">
         <div className="grid grid-cols-2">
           <div className="pr-8">
             <Image

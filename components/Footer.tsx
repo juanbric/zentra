@@ -9,11 +9,8 @@ export const Footer = () => {
           <Stack
             direction={["column", "row"]}
             spacing={4}
-            className="verde header-tiny-bold flex items-start lg:items-center justify-center"
+            className="verde flex items-start lg:items-center justify-center"
           >
-            <img src="/whatsapp.svg" className="pr-4 " />
-            <p>Escríbenos por whatsapp o llámanos al +31620717899</p>
-            <Link href={"/quienes-somos"}>Quiénes somos</Link>
             <Link href={"/politica-de-privacidad"}>Política de privacidad</Link>
             <Link href={"/terminos-y-condiciones-de-uso"}>
               Términos y condiciones de uso
