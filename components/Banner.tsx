@@ -26,12 +26,13 @@ export const Banner = ({ copy }: { copy: string }) => {
         <h1 className="copy blue">{copy}</h1>
         <Spacer size={32} />
         <div className="hover:scale-105 transform-gpu ease-in-out duration-300">
-        <Link
-          href={"/blog"}
+        <a
+          href={"https://calendly.com/zentradev/30min"}
+          target='_blank' rel='noopener noreferrer'
           className="bg-gris px-8 py-3 rounded-[18px] text-white header-tiny-bold"
         >
           RESERVA TU CONSULTORÍA GRATUITA
-        </Link>
+        </a>
         </div>
       </div>
       <div className="hidden lg:block lg:pl-14 pt-4 lg:w-3/5">
