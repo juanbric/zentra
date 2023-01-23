@@ -19,9 +19,9 @@ const ThirdSection = ({
     <div className="lg:flex lg:justify-center lg:items-center">
       <div className="px-4 lg:px-8 w-auto lg:w-[1130px]">
         <section className="pt-[52px] pb-8 md:py-[128px] flex flex-col items-center justify-center">
-          <div className="max-w-[511px] text-center">
-            <p className="title pb-4">Platform highlights</p>
-            <h2 className="sub-title mb-16">{platformHighlights}</h2>
+          <div className="max-w-[711px] text-center">
+            <p className="title pb-4">Expande tus horizontes.</p>
+            <h2 className="sub-title mb-[82px]">{platformHighlights}</h2>
           </div>
           <div className="md:grid md:grid-cols-3 md:gap-16">
             <div className="text-center flex flex-col max-w-[370px]"> 

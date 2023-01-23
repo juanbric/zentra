@@ -17,7 +17,7 @@ export default function Home() {
   // Components
   const headerTitle = "Aumenta tu alcance.";
   const headerSubTitle =
-    "Hello, we are Trovali. A new company harnessing the power of AI to streamline student photo management for schools. Our technology provides a clear understanding of which students have granted permission for their pictures to be shared externally, and automatically organizes photos by student identity for easy searchability.";
+    "Ayudamos a empresarios autónomos y empresas pequeñas a diseñar, crear y optimizar aplicaciones y sitios web, resolviendo lo que les preocupa del negocio a través del código y el diseño.";
 
   const secondTitle =
     "Identify students in pictures, store and find their photos, and track their privacy permissions.";
@@ -26,16 +26,16 @@ export default function Home() {
   const secondCopy =
     "Our platform provides schools with a clear understanding of which students have granted permission for their pictures to be shared externally, ensuring compliance with student privacy laws. Additionally, the platform automatically organizes photos by student identity, making it easy to search and locate any student's photos, saving time and effort for school staff. This not only helps schools to keep student privacy but also makes it easier for staff to manage, organize and access student photos, and help them to use them for educational purposes. Trovali's technology is the ultimate solution for schools looking to efficiently manage student photos while ensuring compliance with student privacy.";
   const platformHighlights =
-    "Our native platform offers a seamless, friendly and best-in-class photo management experience, designed to be continously improved and expanded with new features.";
-  const featureOneTitle = "Permission tracking";
+    "Lleva tu negocio a nuevos niveles de éxito con nuestra ayuda.";
+  const featureOneTitle = "Diseñamos";
   const featureOneDescription =
-    "Know which students have granted permission for their pictures to be shared externally by checking any picture on our platform";
-  const featureTwoTitle = "Seamless photo searchability";
+    "Tangilibizamos el valor de tu negocio con sitios y aplicaciones web.";
+  const featureTwoTitle = "Desarrollamos";
   const featureTwoDescription =
-    "Easily locate any student's photos with our platform's automatic way of organizing photos by identity every time staff does an upload.";
-  const featureThreeTitle = "Commercial use of photos";
+    "Avanzamos soluciones flexibles y robustas que siguen creciendo.";
+  const featureThreeTitle = "Elevamos";
   const featureThreeDescription =
-    "Access and compile student photos accumulated throughout the years to use them for commercial purposes such as selling them to student's parents.";
+    "Maximizamos el valor de tu negocio mejorando tu presencia online.";
 
   return (
     <>
@@ -53,25 +53,24 @@ export default function Home() {
         image={imageMeta}
       />
       <main>
-      {/* Header */}
-      <Banner headerTitle={headerTitle} headerSubTitle={headerSubTitle} />
+        {/* Header */}
+        <Banner headerTitle={headerTitle} headerSubTitle={headerSubTitle} />
 
-      {/* Second section */}
-      <SecondSection
-        secondTitle={secondTitle}
-        secondSubTitle={secondSubTitle}
-        secondCopy={secondCopy}
-      />
-
-      <ThirdSection
-        platformHighlights={platformHighlights}
-        featureOneTitle={featureOneTitle}
-        featureOneDescription={featureOneDescription}
-        featureTwoTitle={featureTwoTitle}
-        featureTwoDescription={featureTwoDescription}
-        featureThreeTitle={featureThreeTitle}
-        featureThreeDescription={featureThreeDescription}
-      />
+        <ThirdSection
+          platformHighlights={platformHighlights}
+          featureOneTitle={featureOneTitle}
+          featureOneDescription={featureOneDescription}
+          featureTwoTitle={featureTwoTitle}
+          featureTwoDescription={featureTwoDescription}
+          featureThreeTitle={featureThreeTitle}
+          featureThreeDescription={featureThreeDescription}
+        />
+        {/* Second section */}
+        <SecondSection
+          secondTitle={secondTitle}
+          secondSubTitle={secondSubTitle}
+          secondCopy={secondCopy}
+        />
       </main>
     </>
   );
