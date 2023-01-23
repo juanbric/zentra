@@ -35,12 +35,12 @@ export const Blog = ({ blogs }: { blogs: any }) => {
         url={undefined}
         image={"https://i.ibb.co/N7zSwSS/logo.png"}
       />
-      <Banner
+      {/* <Banner
         img={"/blog.png"}
         copy={
           "Transforma tu negocio con el poder del desarrollo web - La agencia de desarrollo web que hace la diferencia"
         }
-      />
+      /> */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {blogs?.map((articulo: any) => {
           const { titulo, subTitulo, slug } = articulo?.fields;
