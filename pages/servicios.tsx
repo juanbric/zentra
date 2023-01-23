@@ -52,12 +52,12 @@ export const Servicios = () => {
         url={undefined}
         image={"https://i.ibb.co/N7zSwSS/logo.png"}
       />
-      <Banner
+      {/* <Banner
         img={"/servicios.png"}
         copy={
           "Creamos páginas informativas, corporativas, y tiendas online rápidas - Modernizamos tu página web para que incrementes tu capacidad de venta"
         }
-      />
+      /> */}
 
       <h1 className="copy-bold text-center">
         Algunas de las tecnologías con las que trabajamos

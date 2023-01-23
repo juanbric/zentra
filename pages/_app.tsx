@@ -7,12 +7,12 @@ import { Analytics } from '@vercel/analytics/react';
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
-      <ChakraProvider>
+      {/* <ChakraProvider> */}
         <Layout>
           <Component {...pageProps} />
         </Layout>
         <Analytics />
-      </ChakraProvider>
+      {/* </ChakraProvider> */}
     </>
   );
 }
