@@ -11,60 +11,64 @@ import {
 
 export const AppBar = () => {
   return (
-    <div className=" bg-white border-b-[0.00001px] border-[#dfd3dc] py-1 lg:py-2">
+    <div className="py-2 md:py-3 bg-[#0d0d0d] sticky top-0">
       <div className="lg:flex lg:justify-center lg:items-center">
         <div className="px-4 lg:px-8 w-auto lg:w-[1130px]">
           <div className="flex justify-between items-center">
-            <div>
-              <Link href={"/"}>
-                <HStack>
-                  <div className="rounded-full p-3 bg-azul" />
-                  <p className="header-small-bold verde">zentradev</p>
-                </HStack>
+            <div className="">
+              <Link
+                className="flex items-center justify-center hover:scale-105 transform-gpu ease-in-out duration-300"
+                href={"/"}
+              >
+                <img src="/logo.svg" className="w-[28px] h-[28px] shadow-xl " />
+                <h3 className="ml-2 logo">zentradev</h3>
               </Link>
             </div>
-            <div className="hidden lg:block header-tiny-bold verde">
-              <Link href={"/nosotros"}>Sobre nosotros</Link>
-              <Link className="px-8" href={"/servicios"}>Nuestros servicios</Link>
+
+            {/* Grande */}
+            <div className="hidden md:flex text-[#fffffb] items-center gap-8">
+              <Link href={"/servicios"}>Servicios</Link>
               <Link href={"/blog"}>Blog</Link>
-              <Link className="px-8" href={"/presentanos-tu-proyecto"}>
-                Peséntanos tu proyecto
+              <Link
+                href={"/contacto"}
+                className="text-[#0d0d0d] bg-[#fffffb] hover:bg-[#6c98c7] py-2 rounded-[6px] px-4 "
+              >
+                Cuéntanos
               </Link>
-              <Link href={"/contacto"}>Contacto</Link>
             </div>
-            <div className="lg:hidden block">
+
+            {/* Pequeno */}
+            <div className="md:hidden block">
               <Menu>
                 <MenuButton
                   as={IconButton}
                   aria-label="Options"
                   icon={
                     <Image
-                      src="/hamburguer.png"
-                      width={32}
-                      height={32}
+                      src="/hamburguer.svg"
+                      width={28}
+                      height={28}
                       alt={""}
                     />
                   }
-                  variant="white"
+                  variant="black"
+                  className="rounded-[6px] outline-none"
                 />
-                <MenuList style={{ width: "100px" }}>
-                  <MenuItem>
-                    <Link href={"/nosotros"}>Sobre nosotros</Link>
-                  </MenuItem>
-                  <MenuItem>
-                    <Link href={"/servicios"}>Nuestros servicios</Link>
-                  </MenuItem>
-                  <MenuItem>
-                    <Link href={"/blog"}>Blog</Link>
-                  </MenuItem>
-                  <MenuItem>
-                    <Link href={"/presentanos-tu-proyecto"}>
-                      Peséntanos tu proyecto
-                    </Link>
-                  </MenuItem>
-                  <MenuItem>
-                    <Link href={"/contacto"}>Contacto</Link>
-                  </MenuItem>
+                <MenuList
+                  minW={50}
+                  style={{
+                    backgroundColor: "#0d0d0d",
+                    border: "none",
+                    color: "#fffffb",
+                  }}
+                  className="flex flex-col items-start justify-start p-4"
+                >
+                  <Link href={"/servicios"}>Servicios</Link>
+
+                  <Link className="py-4" href={"/blog"}>
+                    Blog
+                  </Link>
+                  <Link href={"/contacto"}>Cuéntanos</Link>
                 </MenuList>
               </Menu>
             </div>

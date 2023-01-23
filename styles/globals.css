@@ -1,162 +1,189 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* Must haves */
 
-@layer base {
-  html,
-  body {
-    font-family: "Montserrat", "Hind Madurai", sans-serif, "Lora", serif;
-  }
+body {
+  margin: 10;
+  font-family: Poppins, sans-serif;
+  color: #fffffb;
+  background: #0d0d0d;
+  overflow-x: hidden;
 }
 
-@layer components {
-  /* Fonts */
-  .header {
-    font-family: "Montserrat";
-    font-size: 44px;
-    line-height: 66px;
-    font-weight: 700;
-  }
-  .header-medium {
-    font-family: "Montserrat";
-    font-size: 31px;
-    line-height: 47px;
-    font-weight: 700;
-  }
-  .header-small-bold {
-    font-family: "Montserrat";
-    font-size: 24px;
-    font-weight: 700;
-  }
-  .header-tiny-bold {
-    font-family: "Montserrat";
-    font-size: 18px;
-    font-weight: 500;
-  }
-  .sub-header {
-    font-family: "Lora";
-    font-size: 32px;
-  }
-  .sub-header-tiny {
-    font-family: "Lora";
-    font-size: 18px;
-    font-weight: 200;
-  }
-  .copy {
-    font-family: "Hind Madurai", sans-serif;
-    font-size: 20px;
-    line-height: 30px;
-    font-weight: 400;
-  }
-  .copy-tiny {
-    font-family: "Hind Madurai", sans-serif;
-    font-size: 14px;
-  }
-  .copy-bold {
-    font-family: "Hind Madurai";
-    font-size: 18px;
-    font-weight: 600;
-  }
-  .description {
-    font-family: "Hind Madurai", sans-serif;
-    font-size: 18px;
-    line-height: 28px;
-    font-weight: 400;
-  }
-  
-  /* Markdown */
-  .markdown h2 {
-    font-family: "Lora";
-    font-size: 24px;
-    font-weight: 200;
-    color: #402f5e;
-    margin-top: 24px;
-    margin-bottom: 4px;
-  }
-  .markdown h3 {
-    font-family: "Lora";
-    font-size: 18px;
-    font-weight: 200;
-    color: #a99ea7;
-    margin-top: 24px;
-    margin-bottom: 4px;
-  }
-  .markdown p {
-    font-family: "Hind Madurai", sans-serif;
-    font-size: 20px;
-    line-height: 30px;
-    font-weight: 400;
-    color: #402f5e;
-  }
-  .markdown a {
-    font-family: "Hind Madurai", sans-serif;
-    font-size: 18px;
-    color: #a45c8c;
-  }
-  .markdown img {
-    display: block;
-    margin: auto;
-    margin-bottom: 24px;
-    margin-top: 24px;
-    border-radius: 22px;
-  }
-  .markdown li {
-    font-family: "Hind Madurai", sans-serif;
-    font-size: 16px;
-    font-weight: bold;
-    color: #402f5e;
-    margin-top: 6px;
-    margin-bottom: 6px;
-    margin-left: 12px;
-  }
-  .markdown ul {
-    margin-top: 12px;
-    margin-bottom: 12px;
-  }
-  .markdown li::before {
-    content: "-   ";
-    margin-right: 0.5em;
-  }
+/* Fonts */
+.title {
+  line-height: 60px;
+  font-size: 48px;
+  font-weight: 500;
+}
 
-  /* Text colors */
-  .azul {
-    color: #243767;
-  }
-  .verde {
-    color: #264c9a;
-  }
-  .gris {
-    color: #6c98c7;
-  }
+.sub-title {
+  line-height: 30px;
+  font-size: 20px;
+  font-weight: 400;
+}
 
-  /* Background colors */
-  .bg-azul {
-    background-color:#243767;
-  }
-  .bg-verde {
-    background-color:#264c9a;
-  }
-  .bg-gris {
-    background-color:#6c98c7;
-  }
+.header {
+  line-height: 26px;
+  font-size: 22px;
+  font-weight: 400;
+}
 
-  /* Border radius */
-  .rounded-cool {
-    border-radius: 26px;
-  }
+.logo {
+  line-height: 28px;
+  font-size: 23px;
+  font-weight: 700;
+}
 
-  /* Progress bar */
-  .progress-container {
-    position: fixed; /* position the progress bar on top of the page */
-    top: 0; /* align the progress bar to the top of the page */
-    left: 0;
-    right: 0;
-    height: 3px; /* set the height of the progress bar */
-    background-color: #ddd; /* set the background color of the progress bar */
-  }
+.copy-big {
+  line-height: 24px;
+  font-size: 16px;
+  font-weight: 400;
+}
 
-  .progress-indicator {
-    height: 100%; /* set the height of the progress indicator to fill the progress bar */
-    background-color: #a45c8c; /* set the background color of the progress indicator */
-  }
+.copy {
+  line-height: 21px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #1f1f1f;
+}
+
+.sub-copy {
+  line-height: 21px;
+  font-size: 14px;
+  font-weight: 400;
+  opacity: 0.6;
+}
+
+/* Markdown */
+
+.markdown h2 {
+  line-height: 24px;
+  font-size: 20px;
+  font-weight: 400;
+  margin-top: 20px;
+  margin-bottom: 4px;
+}
+.markdown h3 {
+  line-height: 22px;
+  font-size: 18px;
+  font-weight: 400;
+  margin-top: 18px;
+  margin-bottom: 4px;
+}
+.markdown p {
+  line-height: 21px;
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 12px;
+}
+.markdown strong {
+  color: white;
+}
+.markdown a:hover {
+  line-height: 21px;
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(25, 25, 25, 0.64);
+  text-underline-offset: 2px;
+}
+.markdown a {
+  line-height: 21px;
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(32, 32, 32, 0.834);
+}
+.markdown img {
+  display: block;
+  margin: auto;
+  margin-bottom: 24px;
+  margin-top: 24px;
+  border-radius: 22px;
+}
+.markdown li {
+  line-height: 21px;
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.64);
+  margin-top: 6px;
+  margin-bottom: 10px;
+  margin-left: 16px;
+}
+.markdown ul {
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+.markdown li::before {
+  content: "-   ";
+  margin-right: 0.5em;
+}
+
+/* Colors */
+.red {
+  background: #dd3f31;
+}
+
+.pink {
+  background: #ff0066;
+}
+
+.blue {
+  background: #3d31dd;
+}
+
+.bg-blue {
+  background-color: #3c31dd;
+}
+
+.dark {
+  background: #0f0f10;
+}
+
+.prev-background {
+  background: #202731;
+}
+
+/* Utils */
+.shorten-p {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+}
+
+.masonry-2-col {
+  column-count: 2;
+  column-gap: 24px;
+  row-gap: 32px;
+}
+
+.grid-item {
+  break-inside: avoid;
+  display: inline-block;
+}
+
+/* Progress bar */
+.progress-container {
+  position: fixed; /* position the progress bar on top of the page */
+  top: 0; /* align the progress bar to the top of the page */
+  left: 0;
+  right: 0;
+  height: 3px; /* set the height of the progress bar */
+  /* background-color: #ddd; set the background color of the progress bar */
+}
+
+.progress-indicator {
+  height: 100%; /* set the height of the progress indicator to fill the progress bar */
+  background-color: #3c31dd; /* set the background color of the progress indicator */
+}
+
+.shadow-x {
+  box-shadow: 0px 20px 100px -5px rgba(0, 0, 0, 0.1);
+}
+
+.colors {
+  color: #0d0d0d;
+  color: #6c98c7;
+  background: #fffffb;
 }
