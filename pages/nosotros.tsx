@@ -1,4 +1,3 @@
-import BotonLink from "../components/Boton";
 import MetaTag from "../components/MetaTag";
 import { HStack, Stack, VStack } from "@chakra-ui/react";
 import Spacer from "../components/Spacer";

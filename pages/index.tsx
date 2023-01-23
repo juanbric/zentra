@@ -1,5 +1,7 @@
 import Banner from "../components/Banner";
+import ContactForm from "../components/ContactForm";
 import MetaTag from "../components/MetaTag";
+import QuoteCard from "../components/QuoteCard";
 import Schema from "../components/Schema";
 import SecondSection from "../components/SecondSection";
 import ThirdSection from "../components/ThirdSection";
@@ -20,11 +22,11 @@ export default function Home() {
     "Ayudamos a empresarios autónomos y empresas pequeñas a diseñar, crear y optimizar aplicaciones y sitios web, resolviendo lo que les preocupa del negocio a través del código y el diseño.";
 
   const secondTitle =
-    "Identify students in pictures, store and find their photos, and track their privacy permissions.";
+    "Nuestra misión es ayudarte a alcanzar el éxito en tu negocio mediante el uso de tecnología.";
   const secondSubTitle =
-    "Managing student photos can be a challenging task for schools, especially when it comes to the different privacy requirements each student has. That's where our highly customizable, one-of-a-kind solution comes in.";
+    "Nuestra agencia ofrece soluciones tecnológicas personalizadas que te ayudarán a aumentar tus ingresos, mejorar tu presencia en línea y realizar tu potencial empresarial.";
   const secondCopy =
-    "Our platform provides schools with a clear understanding of which students have granted permission for their pictures to be shared externally, ensuring compliance with student privacy laws. Additionally, the platform automatically organizes photos by student identity, making it easy to search and locate any student's photos, saving time and effort for school staff. This not only helps schools to keep student privacy but also makes it easier for staff to manage, organize and access student photos, and help them to use them for educational purposes. Trovali's technology is the ultimate solution for schools looking to efficiently manage student photos while ensuring compliance with student privacy.";
+    "Entendemos que el mundo empresarial puede ser desafiante y que el espacio digital, con cada nueva tecnología que sale día a día, puede ser abrumador. Pero estamos aquí para ayudarte. En nuestra agencia, nos especializamos en ayudar a empresas como la tuya a navegar el mundo digital con creatividad e innovación. Sabemos que cada negocio es único, por eso ofrecemos soluciones personalizadas para adaptarse a tus necesidades. Te acompañamos en cada paso del camino, desde el diseño y desarrollo de tu sitio o aplicación web hasta la estrategia de SEO y marketing en línea. Juntos podemos alcanzar ese éxito que tanto deseas. ¿Estás listo para dar el salto?";
   const platformHighlights =
     "Impulsa tu negocio a nuevos límites con nuestra ayuda.";
   const featureOneTitle = "Diseñamos";
@@ -36,6 +38,7 @@ export default function Home() {
   const featureThreeTitle = "Elevamos";
   const featureThreeDescription =
     "Maximizamos el valor de tu negocio mejorando tu presencia online.";
+  const jpQuote = `"La filosofía de zentradev se basa en ayudar a las empresas a alcanzar su verdadero potencial en el mundo digital. Creemos en la creatividad y la innovación como herramientas clave para lograrlo, y trabajamos mano a mano con nuestros clientes para asegurarnos de que alcancen sus objetivos."`;
 
   return (
     <>
@@ -56,6 +59,7 @@ export default function Home() {
         {/* Header */}
         <Banner headerTitle={headerTitle} headerSubTitle={headerSubTitle} />
 
+        {/* Second section */}
         <ThirdSection
           platformHighlights={platformHighlights}
           featureOneTitle={featureOneTitle}
@@ -65,12 +69,18 @@ export default function Home() {
           featureThreeTitle={featureThreeTitle}
           featureThreeDescription={featureThreeDescription}
         />
-        {/* Second section */}
+
+        {/* Third section */}
         <SecondSection
           secondTitle={secondTitle}
           secondSubTitle={secondSubTitle}
           secondCopy={secondCopy}
         />
+
+        {/* Quote section */}
+        <QuoteCard jpQuote={jpQuote} />
+
+        <ContactForm />
       </main>
     </>
   );
