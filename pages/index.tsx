@@ -26,7 +26,7 @@ export default function Home() {
   const secondCopy =
     "Our platform provides schools with a clear understanding of which students have granted permission for their pictures to be shared externally, ensuring compliance with student privacy laws. Additionally, the platform automatically organizes photos by student identity, making it easy to search and locate any student's photos, saving time and effort for school staff. This not only helps schools to keep student privacy but also makes it easier for staff to manage, organize and access student photos, and help them to use them for educational purposes. Trovali's technology is the ultimate solution for schools looking to efficiently manage student photos while ensuring compliance with student privacy.";
   const platformHighlights =
-    "Lleva tu negocio a nuevos niveles de éxito con nuestra ayuda.";
+    "Impulsa tu negocio a nuevos límites con nuestra ayuda.";
   const featureOneTitle = "Diseñamos";
   const featureOneDescription =
     "Tangilibizamos el valor de tu negocio con sitios y aplicaciones web.";
