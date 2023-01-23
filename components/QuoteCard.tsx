@@ -3,7 +3,7 @@ const QuoteCard = ({ jpQuote }: { jpQuote: string }) => {
     <section className="md:mb-[150px]">
       <div className="lg:flex lg:justify-center lg:items-center">
         <div className="px-4 lg:px-8 w-auto lg:w-[1130px]">
-          <div className="pt-[52px] pb-8 md:py-[0px]">
+          <div className="pt-[62px] pb-[108px] md:py-[30px]">
             <div className="md:grid md:grid-cols-5 md:gap-8 border border-radius">
               <div className="py-[52px] md:py-[92px] px-8 md:col-span-3 md:flex md:flex-col md:justify-between">
                 <div className="mb-2 header italic">{jpQuote}</div>

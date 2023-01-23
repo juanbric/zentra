@@ -12,7 +12,7 @@ const Banner = ({
       <div className="px-4 lg:px-8 w-auto lg:w-[1130px]">
         <section className="">
           <div className="md:grid md:grid-cols-2 md:gap-[80px]">
-            <div className="py-[52px] md:py-[148px]">
+            <div className="py-[82px] md:py-[148px]">
               <div className="title mb-2">{headerTitle}</div>
               <div className="sub-title mb-6">{headerSubTitle}</div>
               <Link

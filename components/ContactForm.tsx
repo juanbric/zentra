@@ -34,7 +34,7 @@ export const ContactForm = () => {
   return (
     <>
       {/* <PopupButton className="py-3 px-4 copy-bold bg-black text-white rounded-[16px]" id="rUQcTGYz">¡Preséntanos tu proyecto!</PopupButton> */}
-      <section className="pb-14">
+      <section className="pb-[110px]">
         <div className="lg:flex lg:justify-center lg:items-center">
           <div className="px-4 lg:px-8 w-auto lg:w-[1130px]">
             <p className="huge-title slide-in-left-utility">Cuéntanos</p>
