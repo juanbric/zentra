@@ -12,7 +12,7 @@ export const BlogCard = ({
   coverUrl: string;
 }) => {
   return (
-    <VStack className="border-2 border-[#f5f5f5] rounded-[22px] p-4 max-w-[300px]">
+    <VStack className="rounded-[22px] p-4 max-w-[300px]">
       <Image src={"https:" + coverUrl} alt={"Blog Cover"} width="280" height="280" className="rounded-[22px]" />
       <Spacer size={2} />
       <p className="copy-bold" style={{alignItems:'start', justifyContent: 'start', textAlign: 'start', display: 'flex'}}>{title}</p>

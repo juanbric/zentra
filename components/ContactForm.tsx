@@ -33,45 +33,53 @@ export const ContactForm = () => {
 
   return (
     <>
-    <PopupButton className="py-3 px-4 copy-bold bg-black text-white rounded-[16px]" id="rUQcTGYz">¡Preséntanos tu proyecto!</PopupButton>
-    <Spacer size={42} />
-      <form onSubmit={handleSubmit} className="card-form">
-        <h3>Puedes contactarnos con cualquier pregunta que tengas</h3>
-        <Spacer size={16} />
-        <h1 className="title-bold">¡Podemos ayudarte!</h1>
-        <Spacer size={16} />
-        <p>
-          Si estás interesado en modernizar tu página web para incrementar tu
-          capacidad de venta, ponte en contacto coon nosotros. Estamos seguros de que
-          podemos ayudarte a maximizar el potencial de tu negocio en línea.
-        </p>
-        <Spacer size={24} />
-
-        <InputField name={"user_name"} copy={"Tu nombre"} type={"text"} />
-        <InputField
-          name={"user_email"}
-          copy={"Tu correo electrónico"}
-          type={"email"}
-        />
-
-        <label className="copy" htmlFor="message">
-          Tu mensaje
-        </label>
-        <Spacer size={8} />
-        <textarea
-          className="w-full bg-[#f5f5f5] rounded-[8px] p-1"
-          onKeyDown={handleKeyDown}
-          style={{ resize: "none" }}
-          name="user_message"
-        />
-        <Spacer size={16} />
-        <button
-          type="submit"
-          className="px-4 py-2 bg-[#1d1d1d] text-white rounded-[8px]"
-        >
-          Solicita información
-        </button>
-      </form>
+      {/* <PopupButton className="py-3 px-4 copy-bold bg-black text-white rounded-[16px]" id="rUQcTGYz">¡Preséntanos tu proyecto!</PopupButton> */}
+      <section className="pb-14">
+        <div className="lg:flex lg:justify-center lg:items-center">
+          <div className="px-4 lg:px-8 w-auto lg:w-[1130px]">
+            <p className="huge-title slide-in-left-utility">Cuéntanos</p>
+            <form onSubmit={handleSubmit} className="mt-10">
+              <div className="md:grid md:grid-cols-12">
+                <div className="md:col-span-3">
+                  <InputField
+                    name={"user_name"}
+                    copy={"Tu nombre"}
+                    type={"text"}
+                  />
+                </div>
+                <div className="md:col-span-3">
+                  <InputField
+                    name={"user_email"}
+                    copy={"Tu correo electrónico"}
+                    type={"email"}
+                  />
+                </div>
+                <div className="md:col-span-6 flex flex-col">
+                  <label className="" htmlFor="message">
+                    Tu mensaje
+                  </label>
+                  <Spacer size={8} />
+                  <textarea
+                    className="bg-second text-second border-radius p-2 outline-none"
+                    onKeyDown={handleKeyDown}
+                    style={{ resize: "none" }}
+                    name="user_message"
+                  />
+                </div>
+              </div>
+              <Spacer size={16} />
+              <div className="md:flex md:items-end md:justify-end mt-4 md:mt-8">
+                <button
+                  type="submit"
+                  className="hover:text-second bg-third hover:bg-second py-2 border-radius px-4 self-end outline-none"
+                >
+                  Solicita información
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
       <SimpleModal
         isOpen={successModal}
         onClose={() => setSuccessModal(false)}
@@ -96,7 +104,7 @@ const InputField = ({
       <label htmlFor={name}>{copy}</label>
       <Spacer size={8} />
       <input
-        className="p-2 bg-[#f5f5f5] rounded-[8px]"
+        className="bg-second border-radius text-second p-2 outline-none"
         type={type}
         name={name}
         required

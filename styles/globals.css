@@ -11,7 +11,68 @@ body {
   overflow-x: hidden;
 }
 
+@layer utilities {
+  /* Theme */
+  .text-first {
+    color: #fffffb;
+  }
+
+  .text-second {
+    color: #0d0d0d;
+  }
+
+  .text-third {
+    color: #3d31dd;
+  }
+
+  .bg-first {
+    background: #0d0d0d;
+  }
+
+  .bg-second {
+    background: #fffffb;
+  }
+
+  .bg-third {
+    background: #3d31dd;
+  }
+
+  .hover\:text-first {
+    @apply .text-first;
+  }
+
+  .hover\:text-second {
+    @apply .text-second;
+  }
+
+  .hover\:text-third {
+    @apply .text-third;
+  }
+
+  .hover\:bg-first {
+    @apply .bg-first;
+  }
+
+  .hover\:bg-second {
+    @apply .bg-second;
+  }
+
+  .hover\:bg-third {
+    @apply .bg-third;
+  }
+
+  .border-radius {
+    border-radius: 6px;
+  }
+}
+
 /* Fonts */
+.huge-title {
+  line-height: 70px;
+  font-size: 62px;
+  font-weight: 600;
+}
+
 .title {
   line-height: 60px;
   font-size: 48px;
@@ -182,8 +243,22 @@ body {
   box-shadow: 0px 20px 100px -5px rgba(0, 0, 0, 0.1);
 }
 
-.colors {
-  color: #0d0d0d;
-  color: #6c98c7;
-  background: #fffffb;
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-300px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.slide-in {
+  animation-name: slideInLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+  animation-delay: 1.5s;
+}
+
+.slide-in-left-utility {
+  @apply slide-in;
 }

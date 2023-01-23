@@ -11,7 +11,7 @@ import {
 
 export const AppBar = () => {
   return (
-    <div className="py-2 md:py-3 bg-[#0d0d0d] sticky top-0 z-20">
+    <div className="py-2 md:py-3 bg-first sticky top-0 z-20">
       <div className="lg:flex lg:justify-center lg:items-center">
         <div className="px-4 lg:px-8 w-auto lg:w-[1130px]">
           <div className="flex justify-between items-center">
@@ -26,12 +26,12 @@ export const AppBar = () => {
             </div>
 
             {/* Grande */}
-            <div className="hidden md:flex text-[#fffffb] items-center gap-8">
+            <div className="hidden md:flex items-center gap-8">
               <Link href={"/servicios"}>Servicios</Link>
               <Link href={"/blog"}>Blog</Link>
               <Link
                 href={"/contacto"}
-                className="hover:text-[#0d0d0d] bg-[#3c31dd] hover:bg-[#fffffb] py-2 rounded-[6px] px-4 "
+                className="hover:text-second bg-third hover:bg-second py-2 border-radius px-4"
               >
                 Cuéntanos
               </Link>
@@ -52,7 +52,7 @@ export const AppBar = () => {
                     />
                   }
                   variant="black"
-                  className="rounded-[6px] outline-none"
+                  className="border-radius outline-none"
                 />
                 <MenuList
                   minW={50}
