@@ -69,6 +69,41 @@ export const Servicios = () => {
       />
       <main className="min-h-[1000px]">
         <BannerServicios />
+
+        <div className="lg:flex lg:justify-center lg:items-center">
+        <div className="px-4 lg:px-8 w-auto lg:w-[1130px]">
+          <section>
+            <div className="md:grid md:grid-cols-2 md:gap-12 ">
+              <div className="py-[52px] md:py-[208px] text-center md:text-start">
+                <div className="title mb-2">Diseño y desarrollo de sitios web personalizado</div>
+              </div>
+              <div className="pb-[52px] md:py-[100px] md:pb-0 flex justify-center">
+                <img src="/logo.svg" className="rounded-[6px] max-h-[350px]" />
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <section className="shadow-x">
+        <div className="lg:flex lg:justify-center lg:items-center">
+          <div className="px-4 lg:px-8 w-auto lg:w-[1130px]">
+            <div className="md:grid md:grid-cols-2 md:gap-8">
+              <div className="pt-[52px] pb-8 md:py-[178px] flex flex-col">
+                <img src="/logo.svg" className="max-w-[400px] rounded-[6px]" />
+              </div>
+              <div className="pb-[52px] md:py-[128px] ">
+              <div className="sub-title pb-8">Optimización de motores de búsqueda (SEO)</div>
+
+                <div className="mb-6">Mejora de la visibilidad de un sitio web en los resultados de búsqueda de Google y otros motores de búsqueda.</div>
+                <div className="">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
       </main>
       {/* <Banner
         img={"/servicios.png"}
