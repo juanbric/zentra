@@ -7,44 +7,6 @@ import Schema from "../components/Schema";
 import Link from "next/link";
 import BannerServicios from "../components/BannerServicios";
 
-const services = [
-  {
-    title: "Diseño y desarrollo de sitios web personalizados",
-    descritpion:
-      "Creación de sitios web atractivos y fáciles de usar que se ajusten a las necesidades y objetivos específicos de cada cliente.",
-  },
-  {
-    title: "Consultoría tecnológica",
-    descritpion:
-      "Asesoramiento a los clientes sobre cómo utilizar al mejor la tecnología en sus negocios.",
-  },
-  {
-    title: "Soporte técnico y mantenimiento",
-    descritpion:
-      "Proporcionar asistencia técnica a los clientes y realizar tareas de mantenimiento regular para asegurar el correcto funcionamiento de los sistemas.",
-  },
-  {
-    title: "Formación y capacitación",
-    descritpion:
-      "Proporcionar a los clientes y su equipo las habilidades y conocimientos necesarios para utilizar eficientemente la tecnología en su negocio.",
-  },
-  {
-    title: "Optimización de motores de búsqueda (SEO)",
-    descritpion:
-      "Mejora de la visibilidad de un sitio web en los resultados de búsqueda de Google y otros motores de búsqueda.",
-  },
-  {
-    title: "Soluciones de comercio electrónico",
-    descritpion:
-      "Desarrollo de plataformas de comercio electrónico que permitan a los clientes vender sus productos o servicios en línea de manera efectiva.",
-  },
-  {
-    title: "Diseño gráfico",
-    descritpion:
-      "Creación de diseños atractivos y coherentes para elementos como logotipos, tarjetas de visita, folletos y otros materiales de marketing.",
-  },
-];
-
 export const Servicios = () => {
   const imageMeta = "https://i.ibb.co/1sJSnJN/zentra.png";
   const description =
@@ -67,104 +29,86 @@ export const Servicios = () => {
         url={URL}
         image={imageMeta}
       />
-      <main className="min-h-[1000px]">
+      <main>
         <BannerServicios />
 
         <div className="lg:flex lg:justify-center lg:items-center">
-        <div className="px-4 lg:px-8 w-auto lg:w-[1130px]">
-          <section>
-            <div className="md:grid md:grid-cols-2 md:gap-12 ">
-              <div className="py-[52px] md:py-[208px] text-center md:text-start">
-                <div className="title mb-2">Diseño y desarrollo de sitios web personalizado</div>
-              </div>
-              <div className="pb-[52px] md:py-[100px] md:pb-0 flex justify-center">
-                <img src="/logo.svg" className="rounded-[6px] max-h-[350px]" />
-              </div>
-            </div>
-          </section>
-        </div>
-      </div>
-
-      <section className="shadow-x">
-        <div className="lg:flex lg:justify-center lg:items-center">
           <div className="px-4 lg:px-8 w-auto lg:w-[1130px]">
-            <div className="md:grid md:grid-cols-2 md:gap-8">
-              <div className="pt-[52px] pb-8 md:py-[178px] flex flex-col">
-                <img src="/logo.svg" className="max-w-[400px] rounded-[6px]" />
+            <section>
+              <div className="flex-col-reverse flex md:grid md:grid-cols-2 pt-[400px] md:pt-[200px]">
+                <div className="">
+                  <div className="title mb-4 md:mb-8">
+                    Diseño y desarrollo de sitios web y aplicaciones
+                    personalizadas.
+                  </div>
+                  <div className="md:block hidden border-t-2 w-1/3 mb-4 mt-12 border-third" />
+                  <div className="">
+                    Creamos sitios y aplicaciones web atractivos y fáciles de
+                    usar que se ajustan a tus necesidades y objetivos
+                    específicos.
+                  </div>
+                </div>
+                <div className="flex md:justify-end mb-8 md:mb-0">
+                  <img
+                    src="/diseno.png"
+                    className="border-radius max-h-[350px]"
+                  />
+                </div>
               </div>
-              <div className="pb-[52px] md:py-[128px] ">
-              <div className="sub-title pb-8">Optimización de motores de búsqueda (SEO)</div>
-
-                <div className="mb-6">Mejora de la visibilidad de un sitio web en los resultados de búsqueda de Google y otros motores de búsqueda.</div>
-                <div className="">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
-              </div>
-            </div>
+            </section>
           </div>
         </div>
-      </section>
 
+        <div className="lg:flex lg:justify-center lg:items-center">
+          <div className="px-4 lg:px-8 w-auto lg:w-[1130px]">
+            <section>
+              <div className="md:grid md:grid-cols-2 pt-[72px] md:pt-[200px]">
+                <div className="mb-8 md:mb-0">
+                  <img src="/seo.png" className="max-h-[350px] border-radius" />
+                </div>
+                <div className="flex flex-col items-end justify-start">
+                  <div className="title mb-4">
+                    Optimización de motores de búsqueda (SEO).
+                  </div>
+                  <div className="md:block hidden self-start border-t-2 w-1/3 mb-4 mt-8 border-third" />
+                  <div className="">
+                    Mejoramos de la visibilidad de tu sitio web en los
+                    resultados de búsqueda de Google.
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
 
+        <div className="lg:flex lg:justify-center lg:items-center">
+          <div className="px-4 lg:px-8 w-auto lg:w-[1130px]">
+            <section>
+              <div className="flex-col-reverse flex md:grid md:grid-cols-2 py-[72px] md:pb-[170px] md:pt-[200px]">
+                <div className="">
+                  <div className="title mb-4 md:mb-8">
+                    Consultoría y capacitación tecnológica.
+                  </div>
+                  <div className="md:block hidden border-t-2 w-1/3 mb-4 mt-12 border-third" />
+                  <div className="">
+                    Te brindamos asesoramiento y proporcionamos habilidades y
+                    conocimientos para utilizar eficientemente la tecnología en
+                    tu negocio.
+                  </div>
+                </div>
+                <div className="flex md:justify-end mb-8 md:mb-0">
+                  <img
+                    src="/consultoria.png"
+                    className="border-radius max-h-[350px]"
+                  />
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
       </main>
-      {/* <Banner
-        img={"/servicios.png"}
-        copy={
-          "Creamos páginas informativas, corporativas, y tiendas online rápidas - Modernizamos tu página web para que incrementes tu capacidad de venta"
-        }
-      /> */}
-
-      {/* <h1 className="copy-bold text-center">
-        Algunas de las tecnologías con las que trabajamos
-      </h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 pt-8 pb-12">
-        <img src="/typescript.png" className="max-w-[150px]" />
-        <img src="/tailwind.png" className="max-w-[150px] lg:pt-8" />
-        <img src="/next.png" className="max-w-[150px]" />
-        <img src="/react.png" className="max-w-[150px]" />
-        <img src="/github.png" className="max-w-[150px]" />
-        <img src="/contentful.png" className="max-w-[150px]" />
-        <img src="/chakra.png" className="max-w-[150px] lg:pt-2" />
-        <img src="/node.png" className="max-w-[150px]" />
-      </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {services.map((service, i) => {
-          return (
-            <ValueCard
-              key={i}
-              title={service.title}
-              description={service.descritpion}
-            />
-          );
-        })}
-      </div>
-
-      <h1 className="copy-bold text-center">
-       Mira el último proyecto que diseñamos y creamos desde cero
-      </h1>
-      <a
-        href="https://www.soltype.io"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <img src="soltype-logo-black.svg" className="pt-8 pb-14" />
-      </a>
-      <ContactForm />*/}
+      <ContactForm />
     </>
-  );
-};
-
-const ValueCard = ({
-  title,
-  description,
-}: {
-  title: string;
-  description: string;
-}) => {
-  return (
-    <div className="border-2 border-[#f5f5f5] max-w-[500px] rounded-[22px] p-4 mb-12">
-      <p className="header-light mb-2">{title}</p>
-      <p className="copy">{description}</p>
-    </div>
   );
 };
 

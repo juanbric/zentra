@@ -37,6 +37,10 @@ body {
     background: #3d31dd;
   }
 
+  .border-third {
+    border-color: #3d31dd;
+  }
+
   .hover\:text-first {
     @apply .text-first;
   }

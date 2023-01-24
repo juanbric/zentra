@@ -31,7 +31,7 @@ export default function Home() {
     "Impulsa tu negocio a nuevos límites con nuestra ayuda.";
   const featureOneTitle = "Diseñamos";
   const featureOneDescription =
-    "Tangilibizamos el valor de tu negocio con sitios y aplicaciones web.";
+    "Tangibilizamos el valor de tu negocio con sitios y aplicaciones web.";
   const featureTwoTitle = "Desarrollamos";
   const featureTwoDescription =
     "Avanzamos soluciones flexibles y robustas que siguen creciendo.";
