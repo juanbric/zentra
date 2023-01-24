@@ -2,6 +2,10 @@ import Banner from "../components/Banner";
 import MetaTag from "../components/MetaTag";
 import { Stack, VStack } from "@chakra-ui/react";
 import ContactForm from "../components/ContactForm";
+import { URL } from "../config";
+import Schema from "../components/Schema";
+import Link from "next/link";
+import BannerServicios from "../components/BannerServicios";
 
 const services = [
   {
@@ -42,16 +46,30 @@ const services = [
 ];
 
 export const Servicios = () => {
+  const imageMeta = "https://i.ibb.co/1sJSnJN/zentra.png";
+  const description =
+    "Ofrecemos una amplia gama de servicios a nuestros clientes. Desde diseño y desarrollo de sitios web personalizados hasta soluciones de comercio electrónico, estamos equipados para manejar todas sus necesidades de tecnología de la información.";
+  const title = "Diseño estratégico de plataformas digitales | zentradev";
+  const date = new Date();
+
   return (
-    <VStack>
-      <MetaTag
-        title={"Nuestros servicios | Zentra Dev"}
-        description={
-          "Ofrecemos una amplia gama de servicios a nuestros clientes. Desde diseño y desarrollo de sitios web personalizados hasta soluciones de comercio electrónico, estamos equipados para manejar todas sus necesidades de tecnología de la información."
-        }
-        url={undefined}
-        image={"https://i.ibb.co/N7zSwSS/logo.png"}
+    <>
+      <Schema
+        title={title}
+        date={date}
+        image={imageMeta}
+        articleBody={undefined}
+        description={description}
       />
+      <MetaTag
+        title={title}
+        description={description}
+        url={URL}
+        image={imageMeta}
+      />
+      <main className="min-h-[1000px]">
+        <BannerServicios />
+      </main>
       {/* <Banner
         img={"/servicios.png"}
         copy={
@@ -59,7 +77,7 @@ export const Servicios = () => {
         }
       /> */}
 
-      <h1 className="copy-bold text-center">
+      {/* <h1 className="copy-bold text-center">
         Algunas de las tecnologías con las que trabajamos
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 pt-8 pb-12">
@@ -95,8 +113,8 @@ export const Servicios = () => {
       >
         <img src="soltype-logo-black.svg" className="pt-8 pb-14" />
       </a>
-      <ContactForm />
-    </VStack>
+      <ContactForm />*/}
+    </>
   );
 };
 
