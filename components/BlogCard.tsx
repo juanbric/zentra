@@ -1,23 +1,26 @@
-import { VStack } from "@chakra-ui/react";
 import Spacer from "./Spacer";
-import Image from "next/image";
 
-export const BlogCard = ({
+const BlogCard = ({
+  img,
   title,
-  subTitle,
-  coverUrl,
+  description,
 }: {
-  title: string;
-  subTitle: string;
-  coverUrl: string;
+  img: any;
+  title: any;
+  description: any;
 }) => {
   return (
-    <VStack className="rounded-[22px] p-4 max-w-[300px]">
-      <Image src={"https:" + coverUrl} alt={"Blog Cover"} width="280" height="280" className="rounded-[22px]" />
-      <Spacer size={2} />
-      <p className="copy-bold" style={{alignItems:'start', justifyContent: 'start', textAlign: 'start', display: 'flex'}}>{title}</p>
-      <p className="copy">{subTitle}</p>
-    </VStack>
+    <>
+      <img
+        src={img}
+        className=" rounded-[6px] object-cover h-[200px] w-full"
+        width={800}
+        height={300}
+      />
+      <h2 className="mb-2 mt-4 header text-start">{title}</h2>
+      <h3 className="shorten-p sub-copy text-start">{description}</h3>
+      <Spacer size={8} />
+    </>
   );
 };
 
