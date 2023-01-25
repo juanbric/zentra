@@ -17,7 +17,7 @@ const BlogCard = ({
         width={800}
         height={300}
       />
-      <h2 className="mb-2 mt-4 text-start">{title}</h2>
+      <h2 className="mb-2 mt-4 header text-start">{title}</h2>
       <h3 className="shorten-p sub-copy text-start">{description}</h3>
       <Spacer size={8} />
     </>

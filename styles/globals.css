@@ -157,14 +157,14 @@ body {
   line-height: 21px;
   font-size: 14px;
   font-weight: 400;
-  color: rgba(25, 25, 25, 0.64);
+  color: #3c31dd;
   text-underline-offset: 2px;
 }
 .markdown a {
   line-height: 21px;
   font-size: 14px;
   font-weight: 400;
-  color: rgba(32, 32, 32, 0.834);
+  color: #a09cd6;
 }
 .markdown img {
   display: block;

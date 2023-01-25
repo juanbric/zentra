@@ -52,26 +52,30 @@ export const Blog = ({ blogs }: { blogs: any }) => {
             <div className="">
               <div className="huge-title mb-4">Blog</div>
               <div className="sub-title mb-2">Experiencias de navegación web para un mundo cambiante</div>
+              <div className="md:block hidden border-t-2 w-1/3 mb-4 mt-12 border-third" />
+
             </div>
             <div className="self-start md:self-end">
-              <img src="/logo.svg" className="max-w-[381px] h-[381px]" />
+              {/* <img src="/logo.svg" className="max-w-[381px] h-[381px]" /> */}
             </div>
           </section>
 
           <div className="md:grid md:grid-cols-3 md:gap-8">
-            {blogs?.map((articulo: any) => {
-              const { titulo, subTitulo, slug } = articulo?.fields;
-              const coverUrl = articulo?.fields.cover.fields.file.url;
-              return (
-                <Link key={articulo?.sys.id} href={slug}>
-                  <BlogCard
-                    title={titulo}
-                    description={subTitulo}
-                    img={coverUrl}
-                  />
-                </Link>
-              );
-            })}
+          {blogs?.map((article: any, i: any) => {
+          const { title, slug, description } = article?.fields;
+          const img = article?.fields.img.fields.file.url;
+          return (
+            <div key={i} className="md:col-span-1 md:mb-0 mb-6 hover:scale-105 transform-gpu ease-in-out duration-300">
+              <Link
+                key={article?.sys.id}
+                href={slug}
+                className="justify-center items-center"
+              >
+                <BlogCard img={img} title={title} description={description} />
+              </Link>
+            </div>
+          );
+        })}
           </div>
         </div>
       </div>
