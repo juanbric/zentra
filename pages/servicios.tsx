@@ -106,8 +106,42 @@ export const Servicios = () => {
             </section>
           </div>
         </div>
+
+        <div className="lg:flex lg:justify-center lg:items-center">
+          <div className="px-4 lg:px-8 w-auto lg:w-[1130px]">
+            <div className="py-8">
+              <p className="max-w-[500px] huge-title slide-in-left-utility">
+                Servicios para cualquiera de tus retos.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="pb-12 md:pb-[400px]">
+          <div className="absolute z-0">
+            <img
+              src="/servicios.png"
+              className="w-auto md:w-[1000px] grayscale opacity-25"
+            />
+          </div>
+          <div className="lg:flex lg:justify-center lg:items-center">
+            <div className="px-4 lg:px-8 w-auto lg:w-[1130px]">
+              <div className="relative md:mt-[80px] z-10">
+                  <p className="font-bold max-w-[500px] sub-title">
+                    Las empresas enfrentan constantes cambios, ya sea para
+                    expandirse, mejorar su rentabilidad o liderar en su mercado.
+                    A veces, estos cambios vienen en forma de varios desafíos
+                    simultáneamente. <br />
+                    La buena noticia es que la tecnología aplicada de manera
+                    inteligente puede ser la clave para superarlos, y en
+                    zentradev podemos ayudarte a hacerlo.
+                  </p>
+                </div>
+            </div>
+          </div>
+        </div>
+
+        <ContactForm />
       </main>
-      <ContactForm />
     </>
   );
 };
