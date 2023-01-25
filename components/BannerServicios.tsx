@@ -14,7 +14,7 @@ const BannerServicios = () => {
       </div>
       <div className="flex justify-between">
         <div className="relative z-0">
-          <img src="/servicios.png" className="w-auto md:w-[1000px]" />
+          <img src="/servicios.png" className="w-auto md:w-[1000px] opacity-50" />
         </div>
         <div className="absolute left-[23px] lg:left-[800px] mt-12 md:mt-[80px] z-10">
           <div className="border w-1/2 mb-4 mt-12" />
