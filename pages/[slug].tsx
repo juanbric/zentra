@@ -1,9 +1,9 @@
-import MetaTag from "../../components/MetaTag";
+import MetaTag from "../components/MetaTag";
 import { createClient } from "contentful";
 import parse from "html-react-parser";
 //@ts-ignore
 import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
-import Skeleton from "../../components/Skeleton";
+import Skeleton from "../components/Skeleton";
 
 const client = createClient({
   //@ts-ignore
@@ -58,12 +58,12 @@ export const Slug = ({ blog }: { blog: any }) => {
   console.log("blog", blog);
   return (
     <article>
-      <MetaTag
+      {/* <MetaTag
         title={titulo + " | Zentra Dev"}
         description={subTitulo}
         url={undefined}
         image={"https:" + coverUrl}
-      />
+      /> */}
       <img
         src={"https:" + coverUrl}
         alt="Cover image"
