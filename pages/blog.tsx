@@ -60,7 +60,7 @@ export const Blog = ({ blogs }: { blogs: any }) => {
             </div>
           </section>
 
-          <div className="md:grid md:grid-cols-3 md:gap-8">
+          <div className="md:grid md:grid-cols-3 md:gap-8 mb-[60px]">
           {blogs?.map((article: any, i: any) => {
           const { title, slug, description } = article?.fields;
           const img = article?.fields.img.fields.file.url;
